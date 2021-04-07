@@ -56,7 +56,7 @@ def XC_FC_FP_grabber(net, result, db):
     with open('bistable_FC_to_XC_FP_ON.txt', 'wb') as fp:
         pickle.dump(clb2_ON_XC, fp)
 
-    with open('bistabale_FC_to_XC_FP_OFF.txt', 'wb') as fp:
+    with open('bistable_FC_to_XC_FP_OFF.txt', 'wb') as fp:
         pickle.dump(clb2_OFF_XC, fp)
 
 if __name__ == '__main__':
