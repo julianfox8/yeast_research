@@ -147,7 +147,7 @@ def bistableFC_bistableXC_FP_checker(net):
         if set(OFF_P) == set(OFF_FC_P):
             y_OFF_XC_FC.extend(OFF_P)
     #with open('test_OFF_XC_FP_FC.txt', 'w') as f:
-        #json.dump(y_OFF_FP, f)
+        #json.dump(y_OFF_XC_FC, f)
     ON_matching_keys = set(y_ON_XC.keys()).intersection(set(FP_results.keys()))
     for k in ON_matching_keys:
         y_ON_FP[k] = [FP_results[k],y_ON[k]]
@@ -158,9 +158,9 @@ def bistableFC_bistableXC_FP_checker(net):
         if set(ON_P) == set(ON_FC_P):
             y_ON_XC_FC.extend(ON_P)
     #with open('test_ON_XC_FP_FC.txt', 'w') as f:
-        #json.dump(y_ON_FP, f)
-    print("number of parameters that exhibit a bistable FC to bistable XC with the same FP where is y ON:" + str(len(y_ON_XC)))
-    print("number of parameters that exhibit a bistable FC to bistable XC with the same FP where is y OFF:" + str(len(y_OFF_XC)))
+        #json.dump(y_ON_XC_FC, f)
+    print("number of parameters that exhibit a bistable FC to bistable XC with the same FP where is y ON:" + str(len(y_ON_XC_FC)))
+    print("number of parameters that exhibit a bistable FC to bistable XC with the same FP where is y OFF:" + str(len(y_OFF_XC_FC)))
 
 if __name__ == '__main__':
     net = sys.argv[1]
