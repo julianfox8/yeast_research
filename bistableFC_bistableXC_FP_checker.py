@@ -44,12 +44,12 @@ def bistableFC_bistableXC_FP_checker(net):
     clb2_ON_XC = {k:clb2_ON[k] for k in clb2_ON_XC_keys}
     clb2_OFF_XC_keys = set(bistable_XC_results).intersection(set(clb2_OFF.keys()))
     clb2_OFF_XC = {k:clb2_OFF[k] for k in clb2_OFF_XC_keys}
-    #with open('../../bistable_FC_to_XC_FP_ON.txt', 'w') as f:
-        #pickle.dump(y_ON_XC, f)
-    #with open('../../bistable_FC_to_XC_FP_OFF.txt', 'w') as f:
-        #pickle.dump(y_OFF_XC, f)
-    print("number of parameters that exhibit a bistable FC to bistable XC with FP where is y ON:" + str(len(clb2_ON_XC)))
-    print("number of parameters that exhibit a bistable FC to bistable XC with FP where is y OFF:" + str(len(clb2_OFF_XC)))
+    #with open('../../bistable_FC_to_XC_FP_clb2_ON.txt', 'w') as f:
+        #pickle.dump(clb2_ON_XC, f)
+    #with open('../../bistable_FC_to_XC_FP_clb2_OFF.txt', 'w') as f:
+        #pickle.dump(clb2_OFF_XC, f)
+    print("number of parameters that exhibit a bistable FC to bistable XC with FP where is CLB2 ON:" + str(len(clb2_ON_XC)))
+    print("number of parameters that exhibit a bistable FC to bistable XC with FP where is CLB2 OFF:" + str(len(clb2_OFF_XC)))
     clb2_OFF_FP = {}
     clb2_ON_FP = {}
     OFF_matching_keys = set(clb2_OFF_XC.keys()).intersection(set(FP_results.keys()))
@@ -61,8 +61,8 @@ def bistableFC_bistableXC_FP_checker(net):
         OFF_FC_P = val[1][1]
         if set(OFF_P) == set(OFF_FC_P):
             clb2_OFF_XC_FC.extend(OFF_P)
-    #with open('test_OFF_XC_FP_FC.txt', 'w') as f:
-        #json.dump(y_OFF_FP, f)
+    #with open('clb2_OFF_XC_FP_FC.txt', 'w') as f:
+        #json.dump(clb2_OFF_FP, f)
     ON_matching_keys = set(clb2_ON_XC.keys()).intersection(set(FP_results.keys()))
     for k in ON_matching_keys:
         clb2_ON_FP[k] = [FP_results[k],clb2_ON[k]]
@@ -72,10 +72,10 @@ def bistableFC_bistableXC_FP_checker(net):
         ON_FC_P = val[1][1]
         if set(ON_P) == set(ON_FC_P):
             clb2_ON_XC_FC.extend(ON_P)
-    #with open('test_ON_XC_FP_FC.txt', 'w') as f:
-        #json.dump(y_ON_FP, f)
-    print("number of parameters that exhibit a bistable FC to bistable XC with the same FP where is y ON:" + str(len(clb2_ON_XC_FC)))
-    print("number of parameters that exhibit a bistable FC to bistable XC with the same FP where is y OFF:" + str(len(clb2_OFF_XC_FC)))
+    #with open('clb2_ON_XC_FP_FC.txt', 'w') as f:
+        #json.dump(clb2_ON_FP, f)
+    print("number of parameters that exhibit a bistable FC to bistable XC with the same FP where is CLB2 ON:" + str(len(clb2_ON_XC_FC)))
+    print("number of parameters that exhibit a bistable FC to bistable XC with the same FP where is CLB2 OFF:" + str(len(clb2_OFF_XC_FC)))
 
 if __name__ == '__main__':
     net = sys.argv[1]
