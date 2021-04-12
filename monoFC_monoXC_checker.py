@@ -39,8 +39,8 @@ def monoFC_monoXC_checker(net):
     clb2_OFF_XC = set(clb2_OFF).intersection(monostable_XC_results)
     #with open('OFF_monostable_FC_clb2.txt', 'w') as f:
         #pickle.dump(clb2_OFF_XC, f)
-    print("number of parameters that exhibit a monostable FC to monostable XC with clb2 ON:" + str(len(clb2_ON_XC)))
-    print("number of parameters that exhibit a monostable FC to monostable XC with clb2 OFF:" + str(len(clb2_OFF_XC)))
+    print("number of parameters that exhibit a monostable FC to monostable XC with CLB2 ON:" + str(len(clb2_ON_XC)))
+    print("number of parameters that exhibit a monostable FC to monostable XC with CLB2 OFF:" + str(len(clb2_OFF_XC)))
 
 if __name__ == '__main__':
     net = sys.argv[1]
