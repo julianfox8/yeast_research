@@ -39,8 +39,8 @@ def bistableFC_bistableXC_checker(net):
     clb2_OFF_XC = set(clb2_OFF).intersection(Bistable_XC)
     #with open('bistable_FC_XC_clb2.txt', 'w') as f:
         #pickle.dump(clb2_OFF_XC, f)
-    print("number of parameters that exhibit a bistable FC to bistable XC with y ON:" + str(len(clb2_ON_XC)))
-    print("number of parameters that exhibit a bistable FC to bistable XC with y OFF:" + str(len(clb2_OFF_XC)))
+    print("number of parameters that exhibit a bistable FC to bistable XC with CLB2 ON:" + str(len(clb2_ON_XC)))
+    print("number of parameters that exhibit a bistable FC to bistable XC with CLB2 OFF:" + str(len(clb2_OFF_XC)))
 
 if __name__ == '__main__':
     net = sys.argv[1]
