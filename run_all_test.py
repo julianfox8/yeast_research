@@ -126,7 +126,7 @@ def bistableFC_bistableXC_FP_checker(net):
     bistable_XC_results = set(XC_query).intersection(set(bistable_query))
     y_ON_XC_keys = set(bistable_XC_results).intersection(set(y_ON.keys()))
     y_ON_XC = {k:y_ON[k] for k in y_ON_XC_keys}
-    y_OFF_XC_keys = set(XC_query).intersection(set(y_OFF.keys()))
+    y_OFF_XC_keys = set(bistable_XC_query).intersection(set(y_OFF.keys()))
     y_OFF_XC = {k:y_OFF[k] for k in y_OFF_XC_keys}
     #with open('../../bistable_FC_to_XC_FP_ON_test.txt', 'w') as f:
         #pickle.dump(y_ON_XC, f)
