@@ -4,6 +4,7 @@ import DSGRN
 import sqlite3
 import ast
 from dsgrn_utilities.parameter_building import construct_parameter
+import pickle 
 
 with open('FC_query_test.txt') as f:
     FC_query_result = json.load(f)
