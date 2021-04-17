@@ -43,8 +43,8 @@ def bistable_grabber(db):
 
 if __name__ == '__main__':
     db = sys.argv[1]
-#    XC_grabber(db)
-#    FC_grabber(db)
-#   FP_grabber(db)
+    XC_grabber(db)
+    FC_grabber(db)
+    FP_grabber(db)
     mono_grabber(db)
     bistable_grabber(db)
