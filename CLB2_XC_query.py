@@ -3,8 +3,7 @@ import sqlite3
 import sys
 import json
 
-with open('FC_query.txt') as f:
-    FC_query_result = json.load(f)
+
 with open('XC_query.txt') as f:
     XC_query = json.load(f)
 
