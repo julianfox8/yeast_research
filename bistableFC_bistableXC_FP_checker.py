@@ -47,7 +47,7 @@ def bistableFC_bistableXC_FP_check(net):
     clb2_ON_FP = {}
     OFF_matching_keys = set(clb2_OFF_XC.keys()).intersection(set(FP_results.keys()))
     for k in OFF_matching_keys:
-        clb2_OFF_FP[k] = [FP_results[k],clb2_OFF[k]]
+        clb2_OFF_FP[k] = [FP_results[k],clb2_OFF_XC[k]]
     clb2_OFF_XC_FC = []
     for key, val in clb2_OFF_FP.items():
         OFF_P = val[0]
@@ -58,7 +58,7 @@ def bistableFC_bistableXC_FP_check(net):
         #json.dump(y_OFF_FP, f)
     ON_matching_keys = set(clb2_ON_XC.keys()).intersection(set(FP_results.keys()))
     for k in ON_matching_keys:
-        clb2_ON_FP[k] = [FP_results[k],clb2_ON[k]]
+        clb2_ON_FP[k] = [FP_results[k],clb2_ON_XC[k]]
     clb2_ON_XC_FC = []
     for key, val in clb2_ON_FP.items():
         ON_P = val[0]
