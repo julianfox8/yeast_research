@@ -44,7 +44,7 @@ def param_compare_XC_FP(net):
 
 if __name__=='__main__':
     net = sys.argv[1]
-    param_compare(net)
+    param_compare_XC_FP(net)
 
 
         
