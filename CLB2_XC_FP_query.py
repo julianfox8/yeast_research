@@ -10,7 +10,9 @@ with open('FP_query.json') as f:
     FP_results = json.load(f)
 with open('bistable_query.json') as f:
     bistable_query = json.load(f)
-def param_compare(net):
+
+    
+def param_compare_XC_FP(net):
     network = DSGRN.Network(net)
     pg = DSGRN.ParameterGraph(network)
     low_clb2 = []
