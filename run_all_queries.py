@@ -21,9 +21,11 @@ def FP_grabber(db):
     cursor2 = c.cursor()
     cursor2.execute('select ParameterIndex, label from Signatures natural join ( select MorseGraphIndex, label from MorseGraphAnnotations where label like "FP%" except select MorseGraphIndex,Source from MorseGraphEdges);')
     FP_fetch = cursor2.fetchall()
-    FP_result = {}
-    for row in FP_fetch:
-        FP_result.setdefault(row[0], []).append(row[1])
+    for k,v in FP_fetch:
+        if k in FP_result:
+            FP_result[k].append(v)
+        else:
+            FP_result[k] = [ v ]
     with open('FP_query.json', 'w') as f:
         json.dump(FP_result,f)
 
