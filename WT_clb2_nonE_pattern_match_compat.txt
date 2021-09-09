@@ -1,0 +1,10 @@
+
+SWI4 : (~YHP1)(~CLB2)(SWI4)(SWI5) : E
+YHP1 : (SWI4) : E
+NDD1 : (SWI4)(CLB2) : E
+CLB2 : (NDD1)
+SWI5 : (~CLB2)(NDD1) : E
+
+
+
+
