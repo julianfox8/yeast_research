@@ -1,8 +1,0 @@
-{
-"domain":false,
-"stablefc":true,
-"count":true,
-"timeseriesfname":"orlando_WT.tsv",
-"tsfile_is_row_format":true,
-"epsilons":[0.025,0.05]
-}
