@@ -1,0 +1,1 @@
+{ "num_proc" : 1, "domain" : false, "stablefc" : true, "count"  : true, "datetime": "now", "parameter_list" : [2,12], "timeseriesfname" : ["wt1_microarray_coregenes_lifepoints_interpol_trim.csv", "wt_rnaseq_ts.tsv"], "tsfile_is_row_format" : true, "epsilons" : [0.0, 0.01, 0.05] }
